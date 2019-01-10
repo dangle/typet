@@ -272,7 +272,7 @@ def _strict_object_meta_fset(_, private_attr, type_):
         in the private attribute iff the value is an instance of type_.
     """
 
-    def _fset(self, value):  # type: Any
+    def _fset(self, value):
         # type: (...) -> None
         """Set the value on self iff the value is an instance of type_.
 
@@ -319,7 +319,7 @@ def _object_meta_fset(_, private_attr, type_):
         and cannot be cast into type_.
     """
 
-    def _fset(self, value):  # type: Any
+    def _fset(self, value):
         # type: (...) -> None
         """Set the value on self and coerce it to type_ if necessary.
 
@@ -387,7 +387,7 @@ class _BaseAnnotatedObject(object):
             self.__class__.__name__,
             ", ".join(
                 "{}={}".format(attr_name, repr(getattr(self, attr_name)))
-                for attr_name in self._tp__typed_properties
+                for attr_name in self._tp__typed_properties  # type: ignore
             ),
         )  # type: ignore
 

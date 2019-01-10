@@ -522,4 +522,4 @@ class String(object):
     """
 
 
-NonEmptyString = String[1:]
+NonEmptyString = String[1:]  # type: Type[Any]

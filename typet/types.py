@@ -18,4 +18,6 @@ __all__ = ("DefType", "NoneType")
 
 
 DefType = typing.Union[types.FunctionType, types.MethodType]
-NoneType = type(None)  # pylint: disable=redefined-builtin
+NoneType = type(
+    None
+)  # type: typing.Type[typing.Any] # pylint: disable=redefined-builtin
